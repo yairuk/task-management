@@ -27,6 +27,6 @@ I used with bootstap - 4 for quickly and simple design
   * types - add more types - for clean and robust code
   
 ## Third party libraries
-https://fontawesome.com/
-https://getbootstrap.com/
-https://github.com/swimlane/ngx-charts
+* https://fontawesome.com/
+* https://getbootstrap.com/
+* https://github.com/swimlane/ngx-charts
