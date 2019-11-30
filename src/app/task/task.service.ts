@@ -81,7 +81,8 @@ export class TaskService {
     const tmpStatusObj = {
       started: 0,
       notStart: 0,
-      completed: 0
+      completed: 0,
+      pause: 0
     }
 
     this._tasks.filter(task => task.type === TASK_TYPE.TASK).forEach(task => {
@@ -89,6 +90,8 @@ export class TaskService {
         tmpStatusObj.completed++
       } else if (task.status === STATUSES.STARTED) {
         tmpStatusObj.started++
+      } else if (task.status === STATUSES.PAUSE) {
+        tmpStatusObj.pause++
       } else {
         tmpStatusObj.notStart++
       }
@@ -99,10 +102,16 @@ export class TaskService {
         name: STATUSES.COMPLETED,
         value: tmpStatusObj.completed
 
-      }, {
+      }, 
+      {
         name: STATUSES.STARTED,
         value: tmpStatusObj.started
-      }, {
+      },
+      {
+        name: STATUSES.PAUSE,
+        value: tmpStatusObj.pause
+      },  
+      {
         name: STATUSES.NOT_START,
         value: tmpStatusObj.notStart
       }]

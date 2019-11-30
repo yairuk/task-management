@@ -72,5 +72,13 @@ export const TASKS: ITask[] = [
         type: TASK_TYPE.SUB_TASK,
         subs: []
     },
+    {
+        id: 10,
+        title: 'pause task',
+        description: 'dont do',
+        status: STATUSES.PAUSE,
+        type: TASK_TYPE.TASK,
+        subs: []
+    }
 
 ]

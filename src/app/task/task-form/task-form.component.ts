@@ -10,7 +10,7 @@ import { NgForm } from '@angular/forms';
 export class TaskFormComponent implements OnInit {
   @ViewChild(NgForm, { static: false }) taskForm: NgForm;
 
-  statuses = [STATUSES.NOT_START, STATUSES.STARTED, STATUSES.COMPLETED];
+  statuses: STATUSES[] = [STATUSES.NOT_START, STATUSES.STARTED, STATUSES.COMPLETED, STATUSES.PAUSE];
   
   @Input() task: ITask;
   @Input() showDeleteBtn: boolean = false;

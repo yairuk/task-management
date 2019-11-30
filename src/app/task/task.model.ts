@@ -1,7 +1,8 @@
 export enum STATUSES {
     NOT_START = 'not-start',
     STARTED = 'started',
-    COMPLETED = 'completed'
+    COMPLETED = 'completed',
+    PAUSE = 'pause'
 }
 
 export interface IStatus {
@@ -26,6 +27,6 @@ export interface ITask {
 export const STATUSES_ICONS = {
     [STATUSES.NOT_START]:  'fas fa-battery-empty',
     [STATUSES.STARTED]:  'fas fa-battery-half',
-    [STATUSES.COMPLETED]:  'fas fa-battery-full'
-
+    [STATUSES.COMPLETED]:  'fas fa-battery-full',
+    [STATUSES.PAUSE]: 'fas fa-pause-circle'
 }

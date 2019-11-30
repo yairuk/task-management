@@ -5,23 +5,21 @@
                   #taskForm="ngForm">
 
                 <div class="form-group row">
-                    <label class="col-2 col-form-label"
+                    <label class="col-3 col-form-label"
                            for="taskTitle">Title</label>
-                    <div class="col-10">
+                    <div class="col-9">
                         <input class="form-control"
                                type="text"
                                placeholder="Title"
-                               required
-                               minlength="3"
                                [(ngModel)]="task.title"
                                name="taskTitle" />
                     </div>
                 </div>
 
                 <div class="form-group row">
-                    <label class="col-2 col-form-label"
+                    <label class="col-3 col-form-label"
                            for="productCodeId">Status</label>
-                    <div class="col-10">
+                    <div class="col-9">
 
                         <select class="custom-select"
                                 [(ngModel)]="task.status"
@@ -32,9 +30,9 @@
                 </div>
 
                 <div class="form-group row">
-                    <label class="col-2 col-form-label"
+                    <label class="col-3 col-form-label"
                            for="descriptionId">Description</label>
-                    <div class="col-10">
+                    <div class="col-9">
                         <textarea class="form-control"
                                   placeholder="Description"
                                   rows=3
