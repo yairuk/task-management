@@ -1,0 +1,66 @@
+<div class="card col-12">
+    <div class="row">
+        <div class="card-body col-12">
+            <form novalidate
+                  #taskForm="ngForm">
+
+                <div class="form-group row">
+                    <label class="col-2 col-form-label"
+                           for="taskTitle">Title</label>
+                    <div class="col-10">
+                        <input class="form-control"
+                               type="text"
+                               placeholder="Title"
+                               required
+                               minlength="3"
+                               [(ngModel)]="task.title"
+                               name="taskTitle" />
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-2 col-form-label"
+                           for="productCodeId">Status</label>
+                    <div class="col-10">
+
+                        <select class="custom-select"
+                                [(ngModel)]="task.status"
+                                name="status">
+                            <option *ngFor="let status of statuses">{{status}}</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-2 col-form-label"
+                           for="descriptionId">Description</label>
+                    <div class="col-10">
+                        <textarea class="form-control"
+                                  placeholder="Description"
+                                  rows=3
+                                  [(ngModel)]="task.description"
+                                  name="description"></textarea>
+                    </div>
+                </div>
+                <div class="row-4">
+                    <div class="col-8">
+                        <button class="btn btn-outline-secondary col-4"
+                                (click)="cancelForm()">Cancel
+                        </button>
+                        <button class="btn btn-outline-primary col-4"
+                                (click)="saveForm(task)">
+                            Save
+                        </button>
+
+                        <button *ngIf="showDeleteBtn && task.type !== 'subTask'" class="btn btn-danger col-4"
+                                (click)="deleteTask()">
+                            Delete
+                        </button>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

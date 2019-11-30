@@ -1,0 +1,37 @@
+<div class="task-detail container"
+     *ngIf="task">
+    <div class="card col-12">
+        <div class="card-header">
+            {{pageTitle}} {{task.type | titlecase}}
+        </div>
+        <div class="row">
+            <div class="task-properties-side card-body col-6">
+                    <legend>Task {{task.id}}</legend>
+                <task-form [task]="task" [showDeleteBtn]="taskParamsId" (clickOnSaveBtn)="saveForm($event)" (clickOnCancelBtn)="cancelForm()" (clickOnDeleteBtn)="deleteTask(task.id)"></task-form>
+            </div>
+            <div class="card-body col-6">
+                <div class="subtasks-header">
+                    <legend>Subtasks  
+                        <span *ngIf="task?.subs?.length">({{task?.subs?.length}})</span>
+
+                    </legend>
+                    <button type="button"
+                            class="btn btn-info btn-sm float-right"
+                            (click)="openForm()">Add Sub Task
+                    </button>
+                </div>
+
+                <div *ngIf="showForm">
+                    <task-form (clickOnSaveBtn)="addSubTask($event)"
+                               (clickOnCancelBtn)="closeForm()"></task-form>
+                </div>
+                <div *ngIf="task.subs?.length">
+                    <sub-task *ngFor="let sub of getSubsTasksList(task.subs)"
+                              [subTask]="sub"
+                              (clickOnEditBtn)="navigateToTask(sub.id)"
+                              (clickOnDeleteBtn)="deleteTask(sub.id, true)"></sub-task>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

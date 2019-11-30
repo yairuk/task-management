@@ -1,0 +1,20 @@
+<div class="card">
+    <div class="card-body"
+         *ngIf="subTask">
+        <div class="row">
+            <div class="col-12">
+                <h5 class="card-title">{{subTask.title}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{subTask.status}} <i
+                       class="{{statusesIcon[subTask.status]}}"></i></h6>
+                <p class="card-text">{{subTask.description}}</p>
+            </div>
+        </div>
+        <button *ngIf="!hideDeleteBtn" class="btn btn-danger col-4 btn-sm float-right"
+                (click)="clickOnDelete(subTask)"> Delete
+        </button>
+        <button class="btn btn-outline-secondary col-4 btn-sm float-right"
+                (click)="clickOnEdit(subTask)"> Edit
+        </button>
+
+    </div>
+</div>
