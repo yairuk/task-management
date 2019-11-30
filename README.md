@@ -8,7 +8,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## UX
 
-the projet have 2 tabs: 
+the project have 2 tabs: 
 1. tasks list - shows all the main tasks and subtasks
 2. statistics for the status of the tasks
 
