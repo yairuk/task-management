@@ -20,8 +20,8 @@ to add subtask for to the task - enter to wanted task and add sub task
 
 I used with bootstap - 4 for quickly and simple design
 
-## think to improve:
-  * ui - more clean design(nice way to show the sub-sub tasks - now i show them only on the subtask edit page)
+## Things to improve:
+  * UI/UX - more clean design(nice way to show the sub-sub tasks - now i show them only on the subtask edit page)
   * form validations - add validations for the title,description fields  - now i can save task with those fields empty
   * Unitests - add more UT for more robust app
   * types - add more types - for clean and robust code
