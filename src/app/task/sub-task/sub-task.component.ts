@@ -1,10 +1,11 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 import { ITask, STATUSES_ICONS } from '../task.model';
 
 @Component({
   selector: 'sub-task',
   templateUrl: './sub-task.component.html',
-  styleUrls: ['./sub-task.component.scss']
+  styleUrls: ['./sub-task.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SubTaskComponent {
 
