@@ -21,6 +21,8 @@ I used with bootstap - 4 for quickly and simple design
   * form validations - add validations for the title,description fields  - now i can save task with those fields empty
   * Unitests - add more UT for more robust app
   * types - add more types - for clean and robust code
+  * use with angular http-client for real http requests
+  * use with onPush change detection strategy
   
 ## Third party libraries
 * https://fontawesome.com/
