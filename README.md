@@ -22,6 +22,7 @@ I used with bootstap - 4 for quickly and simple design
   * Unitests - add more UT for more robust app
   * types - add more types - for clean and robust code
   * use with angular http-client for real http requests
+  * use with onPush change detection strategy
   
 ## Third party libraries
 * https://fontawesome.com/
