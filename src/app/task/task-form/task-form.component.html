@@ -50,7 +50,8 @@
                             Save
                         </button>
 
-                        <button *ngIf="showDeleteBtn && task.type !== 'subTask'" class="btn btn-danger col-4"
+                        <button *ngIf="showDeleteBtn && task.type !== 'subTask'"
+                                class="btn btn-danger col-4"
                                 (click)="deleteTask()">
                             Delete
                         </button>

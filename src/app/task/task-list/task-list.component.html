@@ -6,27 +6,33 @@
         </li>
         <li class="nav-item">
             <a class="nav-link"
-            [routerLink]="['/statistics']">Statistics</a>
+               [routerLink]="['/statistics']">Statistics</a>
         </li>
     </ul>
-    <button type="button" class="add-task-btn btn btn-info btn-sm float-right" (click)="navigateToTask('')">Add Task</button>
+    <button type="button"
+            class="add-task-btn btn btn-info btn-sm float-right"
+            (click)="navigateToTask('')">Add Task</button>
+    <legend>Tasks List</legend>
     <div class="card col-12"
          *ngFor="let task of tasksList$ | async">
         <div class="row">
             <div class="card-body col-6">
                 <h5 class="card-title">{{task.title}}</h5>
-                <h6 class="card-subtitle mb-2 text-muted">{{task.status}} <i class="{{statusesIcon[task.status]}}"></i></h6>
+                <h6 class="card-subtitle mb-2 text-muted">{{task.status}} <i class="{{statusesIcon[task.status]}}"></i>
+                </h6>
                 <p class="card-text">{{task.description}}</p>
                 <button class="btn btn-outline-secondary col-2"
-                      (click)="navigateToTask(task.id)"> Edit
-              </button>
+                        (click)="navigateToTask(task.id)"> Edit
+                </button>
             </div>
             <div class="card-body col-6"
                  *ngIf="task.subs?.length">
                 <h6 class="card-title">Sub-Tasks ({{task?.subs?.length}})</h6>
                 <div *ngIf="task.subs && task.subs.length > 0">
-                        <sub-task [subTask]="sub" [hideDeleteBtn]="true" *ngFor="let sub of getSubsTasksList(task.subs)"
-                        (clickOnEditBtn)="navigateToTask(sub.id)">
+                    <sub-task [subTask]="sub"
+                              [hideDeleteBtn]="true"
+                              *ngFor="let sub of getSubsTasksList(task.subs)"
+                              (clickOnEditBtn)="navigateToTask(sub.id)">
                     </sub-task>
                 </div>
             </div>

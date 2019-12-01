@@ -9,7 +9,8 @@
                 <p class="card-text">{{subTask.description}}</p>
             </div>
         </div>
-        <button *ngIf="!hideDeleteBtn" class="btn btn-danger col-4 btn-sm float-right"
+        <button *ngIf="!hideDeleteBtn"
+                class="btn btn-danger col-4 btn-sm float-right"
                 (click)="clickOnDelete(subTask)"> Delete
         </button>
         <button class="btn btn-outline-secondary col-4 btn-sm float-right"

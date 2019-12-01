@@ -102,7 +102,7 @@ export class TaskService {
         name: STATUSES.COMPLETED,
         value: tmpStatusObj.completed
 
-      }, 
+      },
       {
         name: STATUSES.STARTED,
         value: tmpStatusObj.started
@@ -110,7 +110,7 @@ export class TaskService {
       {
         name: STATUSES.PAUSE,
         value: tmpStatusObj.pause
-      },  
+      },
       {
         name: STATUSES.NOT_START,
         value: tmpStatusObj.notStart

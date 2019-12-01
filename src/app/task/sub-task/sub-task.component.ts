@@ -1,11 +1,12 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { ITask, STATUSES_ICONS } from '../task.model';
+
 @Component({
   selector: 'sub-task',
   templateUrl: './sub-task.component.html',
   styleUrls: ['./sub-task.component.scss']
 })
-export class SubTaskComponent implements OnInit {
+export class SubTaskComponent {
 
   statusesIcon = STATUSES_ICONS;
   
@@ -13,12 +14,6 @@ export class SubTaskComponent implements OnInit {
   @Input() hideDeleteBtn: boolean;
   @Output() clickOnEditBtn: EventEmitter<any> = new EventEmitter();
   @Output() clickOnDeleteBtn: EventEmitter<any> = new EventEmitter();
-
-
-  constructor() { }
-
-  ngOnInit() {
-  }
 
   clickOnEdit(subTask: ITask) {
     this.clickOnEditBtn.emit({ subTask: subTask });

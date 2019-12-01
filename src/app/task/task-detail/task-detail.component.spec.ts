@@ -10,8 +10,8 @@ describe('TaskDetailComponent', () => {
   let component: TaskDetailComponent;
   let fixture: ComponentFixture<TaskDetailComponent>;
 
-  const mockActivatedRoute = { 
-    params: of({ id: 5 }) 
+  const mockActivatedRoute = {
+    params: of({ id: 5 })
   };
 
   beforeEach(async(() => {

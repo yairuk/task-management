@@ -10,13 +10,13 @@ const routes: Routes = [
     component: TaskListComponent,
     pathMatch: 'full'
   },
-  { 
-    path: 'task/:id',      
-    component: TaskDetailComponent 
+  {
+    path: 'task/:id',
+    component: TaskDetailComponent
   },
-  { 
-    path: 'statistics',      
-    component: TaskStatisticsComponent 
+  {
+    path: 'statistics',
+    component: TaskStatisticsComponent
   },
   {
     path: '',

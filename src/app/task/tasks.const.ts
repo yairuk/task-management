@@ -25,7 +25,7 @@ export const TASKS: ITask[] = [
         subs: []
     },
     {
-        id:  4,
+        id: 4,
         title: 'task no 4',
         description: 'drive',
         status: STATUSES.STARTED,

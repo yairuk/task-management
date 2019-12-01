@@ -1,8 +1,7 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TaskService } from '../task.service';
 import { ITask } from '../task.model';
-import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-task-detail',

@@ -11,19 +11,19 @@ export class TaskFormComponent implements OnInit {
   @ViewChild(NgForm, { static: false }) taskForm: NgForm;
 
   statuses: STATUSES[] = [STATUSES.NOT_START, STATUSES.STARTED, STATUSES.COMPLETED, STATUSES.PAUSE];
-  
+
   @Input() task: ITask;
   @Input() showDeleteBtn: boolean = false;
   @Output() clickOnSaveBtn: EventEmitter<any> = new EventEmitter();
   @Output() clickOnCancelBtn: EventEmitter<any> = new EventEmitter();
   @Output() clickOnDeleteBtn: EventEmitter<any> = new EventEmitter();
 
-  
+
   constructor() { }
 
   ngOnInit() {
     if (!this.task) {
-        this._resetTask();
+      this._resetTask();
     }
   }
 
@@ -39,14 +39,14 @@ export class TaskFormComponent implements OnInit {
     this.clickOnDeleteBtn.emit();
   }
 
- private _resetTask() {
+  private _resetTask() {
     this.task = {
       id: null,
       title: null,
       description: null,
       status: this.statuses[0],
       type: null,
-      subs:[]
+      subs: []
     };
   }
 }

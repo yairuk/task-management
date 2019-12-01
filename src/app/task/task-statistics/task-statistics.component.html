@@ -9,7 +9,9 @@
                [routerLink]="['/statistics']">Statistics</a>
         </li>
     </ul>
+    <legend>Tasks Statistics</legend>
     <div class="container">
+
         <ngx-charts-pie-chart *ngIf="chartData"
                               [results]="chartData"
                               [legend]="true"

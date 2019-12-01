@@ -6,12 +6,16 @@
         </div>
         <div class="row">
             <div class="task-properties-side card-body col-6">
-                    <legend>Task {{task.id}}</legend>
-                <task-form [task]="task" [showDeleteBtn]="taskParamsId" (clickOnSaveBtn)="saveForm($event)" (clickOnCancelBtn)="cancelForm()" (clickOnDeleteBtn)="deleteTask(task.id)"></task-form>
+                <legend>Task {{task.id}}</legend>
+                <task-form [task]="task"
+                           [showDeleteBtn]="taskParamsId"
+                           (clickOnSaveBtn)="saveForm($event)"
+                           (clickOnCancelBtn)="cancelForm()"
+                           (clickOnDeleteBtn)="deleteTask(task.id)"></task-form>
             </div>
             <div class="card-body col-6">
                 <div class="subtasks-header">
-                    <legend>Subtasks  
+                    <legend>Subtasks
                         <span *ngIf="task?.subs?.length">({{task?.subs?.length}})</span>
 
                     </legend>

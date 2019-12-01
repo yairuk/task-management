@@ -9,17 +9,17 @@ describe('TaskComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TaskListComponent ],
+      declarations: [TaskListComponent],
       providers: [
-        { 
-          provide: Router, 
+        {
+          provide: Router,
           useClass: class { navigate = jasmine.createSpy("navigate"); }
-      }
+        }
       ],
       schemas: [NO_ERRORS_SCHEMA]
 
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
